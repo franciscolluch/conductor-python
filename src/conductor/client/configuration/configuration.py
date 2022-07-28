@@ -14,6 +14,7 @@ class Configuration:
             debug: bool = False,
             authentication_settings: AuthenticationSettings = None,
             server_api_url: str = None,
+            domain: str = None,
     ):
         if server_api_url != None:
             self.host = server_api_url
@@ -53,6 +54,10 @@ class Configuration:
         self.proxy = None
         # Safe chars for path_param
         self.safe_chars_for_path_param = ''
+        # Domain setting
+        self.domain = domain
+        
+
 
     @property
     def debug(self):

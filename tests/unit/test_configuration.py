@@ -27,3 +27,10 @@ class TestConfiguration(unittest.TestCase):
             configuration.host,
             'https://play.orkes.io/api/'
         )
+
+    def test_initialization_with_domain(self):
+        configuration = Configuration(domain='testing')
+        self.assertEqual(
+            configuration.domain,
+            'testing'
+        )
